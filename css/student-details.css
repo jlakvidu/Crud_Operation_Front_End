@@ -68,39 +68,6 @@ input.form-control:focus {
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-.btn-primary {
-    background-color: #007bff;
-    color: white;
-    border: none;
-}
-
-.btn-primary:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-}
-
-.btn-secondary {
-    background-color: #e3f2fd;
-    color: #007bff;
-    border: none;
-}
-
-.btn-secondary:hover {
-    background-color: #b3e5fc;
-    color: #0056b3;
-    transform: scale(1.05);
-}
-
-#studentImage {
-    border-radius: 8px;
-    border: 2px solid #b3e5fc;
-    transition: transform 0.3s ease;
-}
-
-#studentImage:hover {
-    transform: scale(1.03);
-}
-
 /* Responsive Styles */
 @media (max-width: 768px) {
     .card {
@@ -117,14 +84,6 @@ input.form-control:focus {
 
     input.form-control {
         padding: 8px;
-    }
-
-    .btn-primary, .btn-secondary {
-        font-size: 1rem;
-    }
-
-    #studentImage {
-        max-width: 100%;
     }
 }
 
@@ -143,14 +102,5 @@ input.form-control:focus {
 
     input.form-control {
         padding: 6px;
-    }
-
-    .btn-primary, .btn-secondary {
-        font-size: 0.875rem;
-        padding: 8px;
-    }
-
-    #studentImage {
-        max-width: 100%;
     }
 }

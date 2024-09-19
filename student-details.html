@@ -10,7 +10,10 @@
 <body>
     <div class="container my-5">
         <div class="card p-4 shadow-lg">
-            <h1 class="text-center mb-4" id="formTitle">Student Details</h1>
+            <div class="text-center mb-4">
+                <img id="studentImage" class="img-fluid img-thumbnail" alt="Student Image" style="max-width: 200px; border-radius: 10px;" />
+            </div>
+            <h1 class="text-center mb-4" id="formTitle">Student Detail</h1>
             <form id="studentDetailsForm" class="row g-3">
                 <!-- Student Information -->
                 <div class="col-12">
@@ -47,10 +50,6 @@
                 <div class="col-md-6">
                     <label for="txtGuardianContact" class="form-label">Guardian Contact</label>
                     <input type="tel" class="form-control" id="txtGuardianContact" disabled />
-                </div>
-                <div class="col-md-6">
-                    <label for="studentImage" class="form-label">Student Image</label>
-                    <img id="studentImage" class="img-fluid img-thumbnail" style="max-width: 200px;" />
                 </div>
             </form>
         </div>

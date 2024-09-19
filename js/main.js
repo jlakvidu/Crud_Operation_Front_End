@@ -1,3 +1,6 @@
+function newStudent() {
+    window.location.href = 'add_or_update-student.html';
+}
 // Load the student table
 function loadTable() {
     fetch('http://localhost:8080/student/get-student')
@@ -8,7 +11,6 @@ function loadTable() {
             students.forEach(student => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                    <td>${student.studentId}</td>
                     <td>${student.studentName}</td>
                     <td>${student.studentAge}</td>
                     <td>${student.studentContactNumber}</td>
