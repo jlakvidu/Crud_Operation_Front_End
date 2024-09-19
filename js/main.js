@@ -18,7 +18,7 @@ function loadTable() {
                     <td>${student.guardianAddress}</td>
                     <td><img src="data:image/jpeg;base64,${student.studentImage}" class="img-thumbnail" style="max-width: 100px;"></td>
                     <td>
-                        <button class="btn btn-info btn-sm" onclick="viewStudentDetails(${student.studentId})"> commit
+                        <button class="btn btn-info btn-sm" onclick="viewStudentDetails(${student.studentId})">
                         <i class="fas fa-info-circle"></i> Details
                         </button>
                         <button class="btn btn-warning btn-sm" onclick="editStudent(${student.studentId})">
