@@ -1,7 +1,7 @@
 //Navugate New Student Page
 function newStudent() {
     localStorage.removeItem('editStudentId');
-    window.location.href = 'add-student.html';
+    window.location.href = 'add_or_update-student.html';
 }
 
 //load the student table
@@ -38,7 +38,7 @@ function loadTable() {
 //edit a student
 function editStudent(studentId) {
     localStorage.setItem('editStudentId', studentId);
-    window.location.href = 'add-student.html';
+    window.location.href = 'add_or_update-student.html';
 }
 
 //delete a student
