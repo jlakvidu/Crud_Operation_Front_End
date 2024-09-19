@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+body {
+    background-color: #e3f2fd; /* Light blue background */
+    font-family: 'Roboto', sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+table thead {
+    background: linear-gradient(145deg, #81d4fa, #29b6f6); /* Light blue gradient */
+    color: #fff;
+    border-radius: 12px 12px 0 0;
+}
+
+table thead th {
+    border: 2px solid #0288d1; /* Darker blue border */
+    padding: 15px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+table tbody td {
+    border: 1px solid #0288d1; /* Darker blue border */
+    text-align: left;
+}
+
+table tbody tr:hover {
+    background-color: #e3f2fd; /* Light blue background on hover */
+}
+
+table tbody tr:last-child td {
+    border-bottom: 2px solid #0288d1; /* Darker blue border */
+}
+
+.container {
+    max-width: 1200px;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #0288d1; /* Darker blue color for the header */
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    animation: zoomIn 1.5s ease-in-out;
+}
+
+button.btn-primary {
+    background: linear-gradient(145deg, #81d4fa, #29b6f6); /* Light blue gradient */
+    border: none;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+}
+
+button.btn-primary:hover {
+    background: linear-gradient(145deg, #4fc3f7, #039be5); /* Slightly darker blue gradient on hover */
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.4s ease;
+}
+
+button.edit-btn {
+    background-color: #4fc3f7; /* Light blue for edit button */
+    color: white;
+    border: none;
+}
+
+button.edit-btn:hover {
+    background-color: #039be5; /* Darker blue for hover */
+    transform: scale(1.1);
+}
+
+button.edit-btn::before {
+    content: "\f044";
+    font-family: FontAwesome;
+    margin-right: 5px;
+}
+
+button.btn-new-student {
+    background: linear-gradient(145deg, #81d4fa, #29b6f6); /* Light blue gradient */
+    border: none;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+button.btn-new-student:hover {
+    background: linear-gradient(145deg, #4fc3f7, #039be5); /* Slightly darker blue gradient on hover */
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+button.btn-new-student:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+    z-index: 0;
+}
+
+button.btn-new-student:hover:before {
+    width: 400%;
+    height: 400%;
+}
+
+button.btn-new-student i {
+    margin-right: 8px;
+    font-size: 1.3rem;
+    transition: transform 0.4s ease;
+}
+
+button.btn-new-student:hover i {
+    transform: rotate(20deg);
+}
+
+button.btn-new-student span {
+    position: relative;
+    z-index: 1;
+}
+
+
+button.delete-btn {
+    background-color: #42a5f5; /* Light blue for delete button */
+    color: white;
+    border: none;
+}
+
+button.delete-btn:hover {
+    background-color: #1e88e5; /* Darker blue for hover */
+    transform: scale(1.1);
+}
+
+button.delete-btn::before {
+    content: "\f1f8";
+    font-family: FontAwesome;
+    margin-right: 5px;
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    button.btn-primary {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    table thead th {
+        padding: 10px;
+    }
+
+    table tbody td {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    button.btn-primary {
+        font-size: 0.875rem;
+        padding: 6px 12px;
+    }
+
+    table thead th {
+        font-size: 0.875rem;
+        padding: 8px;
+    }
+
+    table tbody td {
+        font-size: 0.875rem;
+        padding: 8px;
+    }
+}

@@ -21,8 +21,12 @@ function loadTable() {
                     <td>${student.guardianAddress}</td>
                     <td><img src="data:image/jpeg;base64,${student.studentImage}" class="img-thumbnail" style="max-width: 100px;"></td>
                     <td>
-                        <button class="btn btn-warning btn-sm" onclick="editStudent(${student.studentId})">Edit</button>
-                        <button class="btn btn-danger btn-sm" onclick="deleteStudent(${student.studentId})">Delete</button>
+                        <button class="btn btn-warning btn-sm" onclick="editStudent(${student.studentId})">
+                        <i class="fas fa-edit"></i> Edit
+                        </button>
+                        <button class="btn btn-danger btn-sm" onclick="deleteStudent(${student.studentId})">
+                        <i class="fas fa-trash"></i> Delete
+                        </button>
                     </td>
                 `;
                 tableBody.appendChild(row);
@@ -43,13 +47,13 @@ function deleteStudent(studentId) {
         fetch(`http://localhost:8080/student/delete-by-id/${studentId}`, {
             method: 'DELETE'
         })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Failed to delete student: ' + response.statusText);
-            }
-            loadTable();
-        })
-        .catch(error => console.error('Error:', error));
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to delete student: ' + response.statusText);
+                }
+                loadTable();
+            })
+            .catch(error => console.error('Error:', error));
     }
 }
 
