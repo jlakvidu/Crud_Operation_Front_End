@@ -1,4 +1,5 @@
 function newStudent() {
+    localStorage.removeItem('editStudentId');
     window.location.href = 'add_or_update-student.html';
 }
 // Load the student table
@@ -11,6 +12,7 @@ function loadTable() {
             students.forEach(student => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
+                    <td>${student.studentId}</td>
                     <td>${student.studentName}</td>
                     <td>${student.studentAge}</td>
                     <td>${student.studentContactNumber}</td>
